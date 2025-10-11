@@ -61,7 +61,11 @@ title: 軟體需求文件(SRD)
 - <span style="color:red">可附情境圖或架構圖，並搭配文字描述。</span>  
 - <span style="color:red">概述預計的實作方案（如前後端語言/框架、部署方式）。</span> 
 - 目標：設計一個機車共乘平台，使用者可以上軟體尋一起共乘的使用者、尋找有無使用者可以共乘去目的地
-- 特色：使用者可以<span style="color:lightblue">即時尋找</span>何時有共乘的使用者一起搭乘、<span style="color:lightblue">現代化</span>的介面、<span style="background-color:lightblue">客製化</span>的使用體驗、
+- 特色：使用者可以<span style="color:lightblue">即時尋找</span>何時有共乘的使用者一起搭乘、<span style="color:lightblue">現代化</span>的介面、<span style="background-color:blue">客製化</span>的使用體驗、使用<span style="color:lightblue">及時地圖</span>顯示位置。
+- 預計的實作方案：
+    - 前端語言/框架：HTML、CSS、JavaScript / React、Tailwind CSS
+    - 後端語言/框架：你媽 FastAPI / 
+    - 部屬方式：
 
 ---
 
@@ -74,7 +78,7 @@ title: 軟體需求文件(SRD)
 
 | 系統管理員 |
 | -------- |
-|      |
+| 曉華曾經在FB經營機車共乘粉絲專頁，因為FB的詐騙帳號太多、系統AI又有著一堆問題，加上沒有開啟審查機制，導致社團詐騙廣告、廢文滿天飛。這次他決定一切重來，寫一個網站並擔任管理員，在 |
 
 
 ---

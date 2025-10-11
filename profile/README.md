@@ -1,17 +1,8 @@
 ---
 # System prepended metadata
-
-title: 軟體需求文件(SRD)
-
 ---
 
-# 軟體需求文件(SRD)
-
-> 📌 本文件為範本，需依實際專案調整。  
-> - <span style="color:red">紅字為說明，請刪除</span>  
-> - <span style="color:blue">藍字為範例，除「接受準則」外皆應修改，並改為黑字(去掉span標籤即可)</span>  
-
----
+# NTOUber 軟體需求文件(SRD)
 
 ## 專案資訊
 - **專案名稱**：<span style="color:lightblue">海大機車共乘系統</span>  
@@ -22,16 +13,19 @@ title: 軟體需求文件(SRD)
 
 ## 版次變更記錄
 
-| 版次 | 變更項目 | 變更日期 |
+| 版次  | 變更項目  | 變更日期 |
 |------|----------|----------|
 | 0.1  | 初版 | 2025/10/11 |
+| 0.2  |          |          |
 | 0.3  |          |          |
 | 0.4  |          |          |
 | 0.5  |          |          |
 | 0.6  |          |          |
+| 0.7  |          |          |
+| 0.8  |          |          |
+| 0.9  |          |          |
 | 1.0  |          |          |
-
-> ℹ️ <span style="color:red">版本紀錄對文件非常重要，請務必於每次改版時修正。</span>  
+ 
 
 ---
 
@@ -57,15 +51,18 @@ title: 軟體需求文件(SRD)
 ---
 
 ## <span id="section2">系統概述 (System Description)</span>
-- <span style="color:red">簡要說明系統之目標與特色。</span>  
-- <span style="color:red">可附情境圖或架構圖，並搭配文字描述。</span>  
-- <span style="color:red">概述預計的實作方案（如前後端語言/框架、部署方式）。</span> 
-- 目標：設計一個機車共乘平台，使用者可以上軟體尋一起共乘的使用者、尋找有無使用者可以共乘去目的地
-- 特色：使用者可以<span style="color:lightblue">即時尋找</span>何時有共乘的使用者一起搭乘、<span style="color:lightblue">現代化</span>的介面、<span style="background-color:blue">客製化</span>的使用體驗、使用<span style="color:lightblue">及時地圖</span>顯示位置。
+- 系統目標：設計一個機車共乘平台，使用者可以上軟體尋一起共乘的使用者、尋找有無使用者可以共乘去目的地
+- 系統特色：使用者可以<span style="color:lightblue">即時尋找</span>何時有共乘的使用者一起搭乘、<span style="color:lightblue">現代化</span>的介面、<span style="background-color:blue">客製化</span>的使用體驗、使用<span style="color:lightblue">及時地圖</span>顯示位置。
+- (可附情境圖或架構圖，並搭配文字描述。)
 - 預計的實作方案：
     - 前端語言/框架：HTML、CSS、JavaScript / React、Tailwind CSS
-    - 後端語言/框架：你媽 FastAPI / 
-    - 部屬方式：
+    - 後端語言/框架：Python / FastAPI 
+    - 部屬方式 ： 待決定
+:::    danger
+部屬方式： **你媽幫我的** :tongue: :tongue: :tongue:
+::: 
+
+   
 
 ---
 
@@ -73,30 +70,65 @@ title: 軟體需求文件(SRD)
 - <span style="color:red">以故事性方式描述系統的運作與特性。</span>  
 - <span style="color:red">可將使用者故事整理成圖文並陳述。</span>  
 - <span style="color:red">針對特定情境、角色說明使用方式。</span>  
-- <span style="color:red">可適當加入 Wireframe。</span>  
+- <span style="color:red">可適當加入 Wireframe。</span>    
 - 
-
-| 系統管理員 |
-| -------- |
-| 曉華曾經在FB經營機車共乘粉絲專頁，因為FB的詐騙帳號太多、系統AI又有著一堆問題，加上沒有開啟審查機制，導致社團詐騙廣告、廢文滿天飛。這次他決定一切重來，寫一個網站並擔任管理員，在 |
-
+- ### 系統管理員
+    華華曾經在FB經營機車共乘粉絲專頁，因為FB的詐騙帳號太多、系統AI又有著一堆問題，加上沒有開啟審查機制，導致社團詐騙廣告、廢文滿天飛。這次他決定一切重來，寫一個網站並擔任管理員，在必要時對平台貼文進行刪除或調整 
+    - #### A. 登入
+        華華打開機車共乘系統，點擊登入並選擇管理員登入，接著輸入帳密登入系統。
+    - #### B. 管理員主頁
+        可以如同一般使用者一樣查看所有使用者的貼文，也可以查看到各貼文申請狀態並刪除異常貼文，也可對指定帳號進行警告與停權。
+- ### 車主
+    諺諺打算騎機車下去高雄，因為他不想讓他寶貝的<span style="color:orange">小橘</span>(FZX檔車)獨自在基隆淋雨，所以想要尋找可以陪他回高雄的好夥伴，但朋友都要坐火車回去，於是他找到了NTOUber這個平台。
+    - #### A. 註冊/登入
+        諺諺想找到一個夥伴一起回高雄，他碰巧發現了NTOUber並打開註冊了自己的帳號並登入。
+    - #### B. 發布貼文
+        諺諺點下新增貼文，選擇身分(車主)、輸入起點與目的地、集合時間、備註，並且允許中途下車。
+    - #### C. 拒絕請求
+        一開始阿瓜請求加入這趟返鄉行程，但諺諺發現這位仁兄家在南投深山中的部落(賽德克族)中，他實在是一點都不想繞超長山路過去，瓜瓜的評分又超低，感覺超難搞，只好拒絕了他的請求。
+    - #### D. 接受請求
+        後來佑佑也發送了請求，希望可以在鹿港中途下車，諺諺看到了很高興，因為它可以順路去彰化看當地人狩獵肉圓，於是乎他同意了這項請求。
+    - #### E. 評分 
+        在約好的日子到來後，諺諺載著佑佑騎著他寶貝的小橘一路往南，在彰化佑佑表演了拿手的狩獵肉圓，諺諺十分享受這趟回家之旅，給佑佑一個五星好評。
+        
+- ### 乘客
+    佑佑和小鈞好窮，火車漲價之後又好貴好貴，想要蹭一下好心人的車回家，於是上網搜尋共乘平台。
+    
+    - #### A. 註冊/登入
+        佑佑上網找到了NTOUber，進入首頁後發現就是他們在找的共乘app，於是註冊了帳號。
+    - #### B. 尋找貼文
+        佑佑打開搜尋欄，輸入起點與目的地、找到了幾個符合需求的行程並發送請求。
+    - #### C. 收取通知
+        佑佑打開網頁後，可以查看自己的請求狀態，並對已同意請求的行程做出參與行程的回覆。
+        
+    
 
 ---
 
 ## <span id="section4">使用者故事地圖 (User Story Map)</span>
-- <span style="color:red">建立完整的使用者故事地圖（User Story Map），以簡短名稱標記。</span>  
-- <span style="color:red">對 **MVP** 的使用者故事進行細部分析，並加上註記與測試方式。</span>  
 
-### 範例使用者故事卡片
-- **代號**：<span style="color:blue">MS-US-01 Add to basket</span>  
-- **故事**：<span style="color:blue">作為一位購物者，我能將欲購買的商品加入購物車，以便稍後購買。</span>  
-- **註記**：  
-  - <span style="color:blue">使用者能輕鬆將商品加入購物車。</span>  
-  - <span style="color:blue">確保後續能進行結帳。</span>  
-- **測試方法**：  
-  - <span style="color:blue">確認「加入購物車」按鈕明顯可見。</span>  
-  - <span style="color:blue">驗證商品是否正確新增至購物車並清楚顯示。</span>  
-  - <span style="color:blue">確認系統有提示新增成功訊息。</span>  
+
+- 故事一 ： 諺諺想要上傳行程貼文到app
+    - **代號**：<span style="color:">NTOU-Uber-01 Driver pose route</span>  
+    - **故事**：<span style="color:">諺諺作為一位車主，能將即將發生的行程貼文，上傳到網站，以便尋找乘客。</span>  
+    - **註記**：  
+      - <span style="color:">車主能輕鬆將行程貼文，上傳到網站。</span>  
+      - <span style="color:">確保後續能被潛在顧客搜尋到。</span>  
+    - **測試方法**：  
+      - <span style="color:">確認「上傳行程」按鈕明顯可見。</span>  
+      - <span style="color:">驗證系統是否正確新增行程至網站上並清楚顯示。</span>  
+      - <span style="color">確認系統有提示新增行程成功訊息。</span>  
+
+- 故事二 ： 喜華想要尋求司機載他一起去目的地
+    - **代號**：<span style="color:">NTOU-Uber-02 Client finding driver</span>  
+    - **故事**：<span style="color:">喜華作為一位乘客，他能上平台尋求車主載他一起前往目的地</span>  
+    - **註記**：  
+      - <span style="color:">乘客能輕鬆將徵求貼文，上傳到網站，或在網站上請求車主一起共乘去目的地。</span>  
+      - <span style="color:">確保徵求貼文能讓車主發現且乘客請求車主接受時能知道車主是否接受。</span>  
+    - **測試方法**：  
+      - <span style="color:">確認「發送請求」按鈕明顯可見跟「上傳行程」按鈕明顯可見。</span>  
+      - <span style="color:">驗證請求、徵求貼文是否正確發送至司機的介面。</span>  
+      - <span style="color">確認系統有提示請求、徵求貼文成功訊息。</span>  
 
 ---
 
@@ -104,23 +136,35 @@ title: 軟體需求文件(SRD)
 - <span style="color:red">UI 說明與分析可使需求更清楚。</span>  
 - <span style="color:red">搭配操作概念與使用者故事，說明核心介面設計。</span>  
 - <span style="color:red">應補充必要文字說明。</span>  
-
+- 首頁
+- 登入
+- 註冊
+- 忘記密碼
+- 主畫面
+- 更新/新增行程
+- 檢視歷史紀錄
 ---
 
 ## <span id="section6">功能需求 (Functional Requirements)</span>
-- <span style="color:red">根據操作概念，分析系統應達成的功能。</span>  
-- <span style="color:red">建議撰寫方式：</span>  
-  - 「<span style="color:blue">系統應提供……</span>」  
-  - 「<span style="color:blue">使用者可……</span>」  
-- <span style="color:red">每一項需求需有唯一編號（介面需求、效能需求亦同）。</span>  
-
+- 系統應達到的功能：
+    - 系統應提供：
+        -  NU-FC-RG 註冊使用者帳號
+        -  NU-FC-LG 登入使用者帳號
+        -  NU-FC-FB 帳號尋回功能
+    - 使用者可做：
+        -  NU-US-DV 使用者能夠選擇車主的身分，並發送共乘貼文給乘客下單
+        -  NU-US-PS 使用者能夠選擇乘客的身分，並發送共乘請求給司機確認是否答應請求
+        -  NU-US-SR 使用者能夠透過目的地搜尋共乘貼文
 ---
 
 ## <span id="section7">非功能需求 (Non-functional Requirements)</span>
-- <span style="color:red">至少應包含效能需求。</span>  
-- <span style="color:red">效能需求描述應具體、可量化，方便驗證。</span>  
 
-### 範例：
-- <span style="color:blue">關鍵字搜尋需於 **7 秒內** 回傳結果，並呈現完整搜尋頁面。</span>  
+
+- 效能需求：
+    - 搜尋貼文需在3秒內回傳
+    - 是台電腦都要能用(手機：>= IPhone 6 ;電腦：>= Win10)
+    - 及時刷新 不要能夠重複點選
+    - IQ > 0 的人都能使用  
+    - 及時反映貼文狀態
 
 ---
